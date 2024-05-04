@@ -1,0 +1,77 @@
+{"usuarios": [
+    {
+      "nome": "luiz henrique",
+      "email": "luiz@hotmail.com",
+      "senha": "123456",
+      "id": "1"
+    },
+    {
+      "id": "dcd2",
+      "nome": "sadasdasdas",
+      "email": "dasdasdsada",
+      "senha": "2321312312"
+    },
+    {
+      "id": "5c6f",
+      "nome": "luiz",
+      "email": "luiz@gmail.com",
+      "senha": "1234",
+      "cep": "88020303",
+      "logradouro": "Avenida Mauro Ramos",
+      "bairro": "Centro",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "df79",
+      "nome": "antonio",
+      "email": "eu@email.com",
+      "senha": "1234",
+      "cep": "88030361",
+      "logradouro": "Servidão Natalicia Pereira",
+      "bairro": "João Paulo",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    },
+    {
+      "id": "315b",
+      "nome": "luiz",
+      "email": "luiz@luiz",
+      "senha": "1234",
+      "cep": "88020303",
+      "logradouro": "Avenida Mauro Ramos",
+      "bairro": "Centro",
+      "cidade": "Florianópolis",
+      "estado": "SC"
+    }
+  ],
+  "locais": [
+    {
+      "id": "1",
+      "nome": "beira mar",
+      "descricao": "Extensa area urbana para caminhadas,corridas,meditação junto da natureza",
+      "tiposDePraticasEsportivas": [
+        "Caminhada",
+        "Corrida",
+        "Musculação ao ar livre",
+        "Piquenique"
+      ],
+      "localizacao": {
+        "endereco": "Rua do Parque, 123"
+      }
+    },
+    {
+      "id": "2",
+      "nome": "Ginásio do Bairro",
+      "descricao": "Ginásio coberto com equipamentos completos para musculação e espaço para aulas de aeróbica e artes marciais.",
+      "tiposDePraticasEsportivas": [
+        "Musculação",
+        "Aeróbica",
+        "Artes Marciais"
+      ],
+      "localizacao": {
+        "endereco": "Avenida Central, 456"
+      }
+    }
+  ]
+}
