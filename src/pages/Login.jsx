@@ -12,11 +12,12 @@ function Login() {
   });
 
   const realizarLogin = async () => {
+    debugger
     console.log(`Attempting to login with email: ${usuario.email}, senha: ${usuario.senha}`);
     try {
       const resultadoLogin = await login(usuario.email, usuario.senha);
       if (resultadoLogin) {
-        localStorage.setItem("isAuteticado", true);
+        localStorage.setItem("isAutenticado", true);
         window.location.href = "/";
       } else {
         alert("Usuário ou senha incorretos!");
@@ -32,7 +33,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <form className="login-form">
+      <div className="login-form">
         <h1>Login</h1>
         <input
           type="email"
@@ -48,9 +49,9 @@ function Login() {
           placeholder="Digite a senha do usuário"
           onChange={(evento) => setUsuario({ ...usuario, senha: evento.target.value })}
         />
-        <button onClick={realizarLogin} className="login-button">Entrar</button>
-        <button onClick={navegarParaCadastro} className="login-button">Cadastrar</button>
-      </form>
+        <button onClick={() => realizarLogin()} className="login-button">Entrar</button>
+        <button onClick={() => navegarParaCadastro()} className="login-button">Cadastrar</button>
+      </div>
     </div>
   );
 }

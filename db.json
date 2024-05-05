@@ -71,19 +71,6 @@
       "localizacao": {
         "endereco": "Rua do Parque, 123"
       }
-    },
-    {
-      "id": "2",
-      "nome": "Ginásio do Bairro",
-      "descricao": "Ginásio coberto com equipamentos completos para musculação e espaço para aulas de aeróbica e artes marciais.",
-      "tiposDePraticasEsportivas": [
-        "Musculação",
-        "Aeróbica",
-        "Artes Marciais"
-      ],
-      "localizacao": {
-        "endereco": "Avenida Central, 456"
-      }
     }
   ]
 }

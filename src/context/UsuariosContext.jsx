@@ -6,10 +6,6 @@ export const UsuariosContextProvider = ({ children }) => {
     const [usuarios, setUsuarios] = useState([]);
     const [locais, setLocais] = useState([]);
 
-    useEffect(() => {
-        fetchUsuarios();
-        fetchLocais();
-    }, []);
 
     const buscarCep = async (cep) => {
       if (cep.length === 8) {
@@ -47,6 +43,7 @@ export const UsuariosContextProvider = ({ children }) => {
 
     const login = async (email, senha) => {
       console.log(`Logging in with email: ${email}, senha: ${senha}`); 
+      debugger
       try {
         const response = await fetch(`http://localhost:3000/usuarios?email=${email}&senha=${senha}`);
         const usuarios = await response.json();
@@ -173,10 +170,17 @@ export const UsuariosContextProvider = ({ children }) => {
         }
     };
 
+    useEffect(() => {
+        fetchUsuarios();
+        fetchLocais();
+    }, []);
+
     return (
         <UsuariosContext.Provider value={{
             usuarios,
             locais,
+            fetchLocais,
+            fetchUsuarios,
             login,
             buscarCep,
             cadastrarUsuario,
