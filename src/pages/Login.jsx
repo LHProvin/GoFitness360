@@ -17,7 +17,6 @@ function Login() {
       const resultadoLogin = await login(usuario.email, usuario.senha);
       if (resultadoLogin) {
         localStorage.setItem("isAuteticado", true);
-        localStorage.setItem("isAuteticado", true);
         window.location.href = "/";
       } else {
         alert("Usuário ou senha incorretos!");
