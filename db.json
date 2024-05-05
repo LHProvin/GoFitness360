@@ -1,4 +1,5 @@
-{"usuarios": [
+{
+  "usuarios": [
     {
       "nome": "luiz henrique",
       "email": "luiz@hotmail.com",
@@ -43,6 +44,17 @@
       "bairro": "Centro",
       "cidade": "Florianópolis",
       "estado": "SC"
+    },
+    {
+      "nome": "juv",
+      "email": "juv@juv",
+      "senha": "1234",
+      "cep": "88020303",
+      "logradouro": "Avenida Mauro Ramos",
+      "bairro": "Centro",
+      "cidade": "Florianópolis",
+      "estado": "SC",
+      "id": "N_YEF74"
     }
   ],
   "locais": [

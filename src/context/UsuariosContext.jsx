@@ -27,7 +27,7 @@ export const UsuariosContextProvider = ({ children }) => {
 
     const fetchUsuarios = async () => {
       try {
-          const response = await fetch('http://localhost:4000/usuarios');
+          const response = await fetch('http://localhost:3000/usuarios');
           const data = await response.json();
           setUsuarios(data);
       } catch (error) {
@@ -37,7 +37,7 @@ export const UsuariosContextProvider = ({ children }) => {
 
     const fetchLocais = async () => {
       try {
-          const response = await fetch('http://localhost:4000/locais');
+          const response = await fetch('http://localhost:3000/locais');
           const data = await response.json();
           setLocais(data);
       } catch (error) {
@@ -48,9 +48,8 @@ export const UsuariosContextProvider = ({ children }) => {
     const login = async (email, senha) => {
       console.log(`Logging in with email: ${email}, senha: ${senha}`); 
       try {
-        const response = await fetch(`http://localhost:4000/usuarios?email=${email}&senha=${senha}`);
+        const response = await fetch(`http://localhost:3000/usuarios?email=${email}&senha=${senha}`);
         const usuarios = await response.json();
-        console.log(usuarios); // Verifique o que está sendo retornado
         return usuarios.length > 0;
       } catch (error) {
         console.error("Erro ao realizar login:", error);
@@ -58,30 +57,33 @@ export const UsuariosContextProvider = ({ children }) => {
       }
     };
     
-    
-
     const cadastrarUsuario = async (usuario) => {
+        console.log('Enviando usuário:', JSON.stringify(usuario));
         try {
-            const response = await fetch('http://localhost:4000/usuarios', {
+            const response = await fetch('http://localhost:3000/usuarios', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(usuario)
             });
+            const data = await response.json(); 
+            console.log('Status da Resposta:', response.status); 
+            console.log('Resposta Completa:', data); 
+    
             if (response.ok) {
                 fetchUsuarios();
             } else {
-                throw new Error('Falha ao cadastrar usuário');
+                throw new Error(`Falha ao cadastrar usuário: ${data.error || 'Erro desconhecido'}`);
             }
         } catch (error) {
             console.error('Erro ao cadastrar usuário:', error);
         }
     };
-
+    
     const editarUsuario = async (id, usuario) => {
         try {
-            const response = await fetch(`http://localhost:4000/usuarios/${id}`, {
+            const response = await fetch(`http://localhost:3000/usuarios/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -105,7 +107,7 @@ export const UsuariosContextProvider = ({ children }) => {
             return;
         }
         try {
-            const response = await fetch(`http://localhost:4000/usuarios/${id}`, {
+            const response = await fetch(`http://localhost:3000/usuarios/${id}`, {
                 method: 'DELETE'
             });
             if (response.ok) {
@@ -120,7 +122,7 @@ export const UsuariosContextProvider = ({ children }) => {
 
     const cadastrarLocal = async (local) => {
         try {
-            const response = await fetch('http://localhost:4000/locais', {
+            const response = await fetch('http://localhost:3000/locais', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -139,7 +141,7 @@ export const UsuariosContextProvider = ({ children }) => {
 
     const editarLocal = async (id, local) => {
         try {
-            const response = await fetch(`http://localhost:4000/locais/${id}`, {
+            const response = await fetch(`http://localhost:3000/locais/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -158,7 +160,7 @@ export const UsuariosContextProvider = ({ children }) => {
 
     const removerLocal = async (id) => {
         try {
-            const response = await fetch(`http://localhost:4000/locais/${id}`, {
+            const response = await fetch(`http://localhost:3000/locais/${id}`, {
                 method: 'DELETE'
             });
             if (response.ok) {

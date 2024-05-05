@@ -13,7 +13,7 @@ function Dashboard() {
         alert("Você precisa estar logado para acessar o Dashboard.");
         navigate("/login"); 
       } else {
-        fetchLocais(); // Busca locais apenas se o usuário estiver autenticado!
+        fetchLocais(); 
       }
     };
 
