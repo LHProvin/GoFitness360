@@ -33,6 +33,10 @@ function Login() {
 
   return (
     <div className="login-container">
+      <div className="header">
+        <h2>GoFitness360</h2> {/* Você pode substituir isso por um <img> se tiver um logo */}
+      </div>
+
       <div className="login-form">
         <h1>Login</h1>
         <input

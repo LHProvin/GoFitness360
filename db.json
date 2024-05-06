@@ -70,19 +70,11 @@
   ],
   "locais": [
     {
-      "nome": "academia do bairro 2",
+      "nome": "academia do bairro 4",
       "descricao": "cadasdasdas",
       "coordenadas": "dsdas",
       "tipoDePratica": "eq3eq",
       "id": "xMBoLXc"
-    },
-    {
-      "nome": "hahahaha",
-      "descricao": "dasdasdasdas",
-      "cep": "88020303",
-      "endereco": "Avenida Mauro Ramos, Centro, Florianópolis, SC",
-      "tiposDePraticasEsportivas": [],
-      "id": "xQAZtVs"
     }
   ]
 }
