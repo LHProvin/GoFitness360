@@ -12,6 +12,7 @@ import Lista from './pages/Lista.jsx';
 import BuscarCep from "./pages/BuscarCep.jsx";
 import CadastroLocalExercicio from './pages/CadastroLocalExercicio.jsx';
 import CadastroExercicio from './pages/CadastroExercicio.jsx';
+import EditarLocal from './pages/EditarLocal.jsx';
 
 let isAutenticado = JSON.parse(localStorage.getItem("isAutenticado")) || false;
 
@@ -69,6 +70,14 @@ const rotas = createBrowserRouter([
         element: (
           <PrivateRoute>
             <CadastroExercicio />
+          </PrivateRoute>
+        )
+      },
+      {
+        path: "/editar-local/:id",
+        element: (
+          <PrivateRoute>
+            <EditarLocal /> 
           </PrivateRoute>
         )
       },

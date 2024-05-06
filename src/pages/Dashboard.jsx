@@ -27,11 +27,14 @@ function Dashboard() {
         navigate(`/editar-local/${id}`);
       } else {
         console.error("Local não encontrado com o ID:", id);
+        alert("Local não encontrado! Por favor, verifique se o ID está correto.");
       }
     } catch (error) {
-      console.error("Erro ao editar local:", error);
+      console.error("Erro ao tentar editar o local:", error);
+      alert("Ocorreu um erro ao tentar editar o local. Por favor, tente novamente.");
     }
-  };
+};
+
 
   const handleRemoverLocal = async (id) => {
     const confirmacao = window.confirm("Tem certeza que deseja remover este local?");

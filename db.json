@@ -59,34 +59,19 @@
   ],
   "locais": [
     {
-      "id": "1",
-      "nome": "beira mar",
-      "descricao": "Extensa area urbana para caminhadas,corridas,meditação junto da natureza",
-      "tiposDePraticasEsportivas": [
-        "Caminhada",
-        "Corrida",
-        "Musculação ao ar livre",
-        "Piquenique"
-      ],
-      "localizacao": {
-        "endereco": "Rua do Parque, 123"
-      }
+      "nome": "MAR LINDO",
+      "descricao": "Lindo",
+      "coordenadas": "Centro",
+      "tipoDePratica": "Todos os tipos",
+      "id": "1"
     },
     {
-      "nome": "academia do bairro",
-      "descricao": "academia bem estruturada com varios equipamentos para musculaçao",
+      "nome": "Corrida",
+      "descricao": "corrida",
       "cep": "88020303",
       "endereco": "Avenida Mauro Ramos, Centro, Florianópolis, SC",
       "tiposDePraticasEsportivas": [],
-      "id": "Ammudh1"
-    },
-    {
-      "nome": "centro de reabilitaçao",
-      "descricao": "centro para multi atividades",
-      "cep": "88020303",
-      "endereco": "Avenida Mauro Ramos, Centro, Florianópolis, SC",
-      "tiposDePraticasEsportivas": [],
-      "id": "L-1dt7G"
+      "id": "T0BIOxl"
     }
   ]
 }
