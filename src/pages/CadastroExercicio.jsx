@@ -24,7 +24,7 @@ function CadastroExercicio() {
     } else {
       await cadastrarExercicio(exercicio);
     }
-    navigate('/dashboard');
+    navigate('/');
   };
 
   return (

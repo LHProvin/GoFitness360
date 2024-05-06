@@ -37,7 +37,7 @@ function EditarLocal() {
         e.preventDefault();
         await editarLocal(id, formData);
         alert('Local atualizado com sucesso!');
-        navigate('/dashboard');
+        navigate('/');
     };
 
     return (
@@ -79,7 +79,7 @@ function EditarLocal() {
                 />
                 
                 <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#4CAF50', color: 'white', fontSize: '16px', cursor: 'pointer' }}>Salvar Alterações</button>
-                <button onClick={() => navigate('/dashboard')} style={{ marginTop: '20px', padding: '10px 10px', backgroundColor: '#f44336', color: 'white', fontSize: '16px', cursor: 'pointer' }}>Cancelar</button>
+                <button onClick={() => navigate('/')} style={{ marginTop: '20px', padding: '10px 10px', backgroundColor: '#f44336', color: 'white', fontSize: '16px', cursor: 'pointer' }}>Cancelar</button>
                 </form>
         </div>
        

@@ -48,7 +48,7 @@ function CadastroLocalExercicio() {
     } else {
       await cadastrarLocal(local);
     }
-    navigate('/dashboard');
+    navigate('/');
   };
 
   return (

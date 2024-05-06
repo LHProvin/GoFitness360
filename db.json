@@ -55,23 +55,34 @@
       "cidade": "Florianópolis",
       "estado": "SC",
       "id": "N_YEF74"
+    },
+    {
+      "nome": "Luiz",
+      "email": "Luiz@fitness.com",
+      "senha": "1234",
+      "cep": "88020303",
+      "logradouro": "Avenida Mauro Ramos",
+      "bairro": "Centro",
+      "cidade": "Florianópolis",
+      "estado": "SC",
+      "id": "yx1dgfY"
     }
   ],
   "locais": [
     {
-      "nome": "MAR LINDO",
-      "descricao": "Lindo",
-      "coordenadas": "Centro",
-      "tipoDePratica": "Todos os tipos",
-      "id": "1"
+      "nome": "academia do bairro 2",
+      "descricao": "cadasdasdas",
+      "coordenadas": "dsdas",
+      "tipoDePratica": "eq3eq",
+      "id": "xMBoLXc"
     },
     {
-      "nome": "Corrida",
-      "descricao": "corrida",
+      "nome": "hahahaha",
+      "descricao": "dasdasdasdas",
       "cep": "88020303",
       "endereco": "Avenida Mauro Ramos, Centro, Florianópolis, SC",
       "tiposDePraticasEsportivas": [],
-      "id": "T0BIOxl"
+      "id": "xQAZtVs"
     }
   ]
 }
