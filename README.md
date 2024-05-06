@@ -1,13 +1,13 @@
 # GoFitness360
 
 ## Introdução
-Exercita365 é uma plataforma inovadora que facilita a busca e o gerenciamento de locais para a prática de atividades físicas, permitindo aos usuários acessar informações detalhadas sobre diversos pontos de exercícios e registrar suas próprias contribuições.
+GoFitness360 é uma plataforma inovadora que facilita a busca e o gerenciamento de locais para a prática de atividades físicas, permitindo aos usuários acessar informações detalhadas sobre diversos pontos de exercícios e registrar suas próprias contribuições.
 
 ### Problema que Resolve
-A dificuldade de encontrar locais adequados para a prática de exercícios físicos é um desafio comum para muitas pessoas. Exercita365 resolve este problema ao fornecer uma plataforma centralizada onde os usuários podem descobrir locais de exercícios próximos, aprender sobre os tipos de atividades disponíveis e contribuir com informações para a comunidade.
+A dificuldade de encontrar locais adequados para a prática de exercícios físicos é um desafio comum para muitas pessoas. GoFitness360 resolve este problema ao fornecer uma plataforma centralizada onde os usuários podem descobrir locais de exercícios próximos, aprender sobre os tipos de atividades disponíveis e contribuir com informações para a comunidade.
 
 ## Tecnologias Utilizadas
-Exercita365 foi desenvolvido utilizando uma variedade de tecnologias e bibliotecas modernas, garantindo uma experiência de usuário fluida e responsiva:
+GoFitness360 foi desenvolvido utilizando uma variedade de tecnologias e bibliotecas modernas, garantindo uma experiência de usuário fluida e responsiva:
 
 - **React**: Usado para construir a interface do usuário com componentes reativos e eficientes.
 - **React Router**: Gerenciamento de navegação entre páginas da aplicação.
