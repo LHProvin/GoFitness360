@@ -71,6 +71,22 @@
       "localizacao": {
         "endereco": "Rua do Parque, 123"
       }
+    },
+    {
+      "nome": "academia do bairro",
+      "descricao": "academia bem estruturada com varios equipamentos para musculaçao",
+      "cep": "88020303",
+      "endereco": "Avenida Mauro Ramos, Centro, Florianópolis, SC",
+      "tiposDePraticasEsportivas": [],
+      "id": "Ammudh1"
+    },
+    {
+      "nome": "centro de reabilitaçao",
+      "descricao": "centro para multi atividades",
+      "cep": "88020303",
+      "endereco": "Avenida Mauro Ramos, Centro, Florianópolis, SC",
+      "tiposDePraticasEsportivas": [],
+      "id": "L-1dt7G"
     }
   ]
 }

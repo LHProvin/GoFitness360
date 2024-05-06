@@ -11,6 +11,7 @@ import Dashboard from './pages/Dashboard.jsx';
 import Lista from './pages/Lista.jsx';
 import BuscarCep from "./pages/BuscarCep.jsx";
 import CadastroLocalExercicio from './pages/CadastroLocalExercicio.jsx';
+import CadastroExercicio from './pages/CadastroExercicio.jsx';
 
 let isAutenticado = JSON.parse(localStorage.getItem("isAutenticado")) || false;
 
@@ -49,12 +50,31 @@ const rotas = createBrowserRouter([
       },
       {
         path: "/cadastro-local",
-        element: <CadastroLocalExercicio />
-      }
+        element: (
+          <PrivateRoute>
+            <CadastroLocalExercicio /> // Corrigido aqui
+          </PrivateRoute>
+        )
+      },
+      {
+        path: "/cadastro-exercicio",
+        element: (
+          <PrivateRoute>
+            <CadastroExercicio />
+          </PrivateRoute>
+        )
+      },
+      {
+        path: "/editar-exercicio/:id",
+        element: (
+          <PrivateRoute>
+            <CadastroExercicio />
+          </PrivateRoute>
+        )
+      },
     ]
   }
 ]);
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <UsuariosContextProvider>

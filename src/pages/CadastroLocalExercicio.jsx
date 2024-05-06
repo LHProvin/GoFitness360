@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UsuariosContext } from '../context/UsuariosContext';
+import './CadastroLocalExercicio.css'; 
 
 function CadastroLocalExercicio() {
   const { cadastrarLocal, editarLocal, locais } = useContext(UsuariosContext);
@@ -14,25 +15,32 @@ function CadastroLocalExercicio() {
   const navigate = useNavigate();
   const [isEdit, setIsEdit] = useState(false);
 
+  useEffect(() => {
+    if (local.cep.length === 8) {
+      buscarCep();
+    }
+  }, [local.cep]);
+
   const buscarCep = async () => {
-    const cep = local.cep;
-    if (cep.length === 8) {
-      try {
-        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        const data = await response.json();
-        setLocal(prevState => ({
-          ...prevState,
-          endereco: `${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`
-        }));
-      } catch (error) {
-        console.error('Erro ao buscar CEP:', error);
-      }
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${local.cep}/json/`);
+      const data = await response.json();
+      setLocal(prevState => ({
+        ...prevState,
+        endereco: `${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`
+      }));
+    } catch (error) {
+      console.error('Erro ao buscar CEP:', error);
     }
   };
 
-  useEffect(() => {
-    buscarCep();
-  }, [local.cep]);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLocal(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
 
   const handleSave = async () => {
     if (isEdit) {
@@ -44,35 +52,38 @@ function CadastroLocalExercicio() {
   };
 
   return (
-    <>
+    <div className="container">
       <h1>{isEdit ? 'Editar Local de Exercício' : 'Cadastro de Local de Exercício'}</h1>
       <input
         type="text"
+        name="nome"
         value={local.nome}
         placeholder="Nome do Local"
-        onChange={(e) => setLocal({ ...local, nome: e.target.value })}
+        onChange={handleChange}
       />
       <textarea
+        name="descricao"
         value={local.descricao}
         placeholder="Descrição do Local"
-        onChange={(e) => setLocal({ ...local, descricao: e.target.value })}
+        onChange={handleChange}
       />
       <input
         type="text"
+        name="cep"
         value={local.cep}
         placeholder="CEP"
-        onChange={(e) => setLocal({ ...local, cep: e.target.value })}
+        onChange={handleChange}
       />
       <input
         type="text"
+        name="endereco"
         value={local.endereco}
         placeholder="Endereço"
         readOnly
       />
       <button onClick={handleSave}>{isEdit ? 'Salvar Alterações' : 'Cadastrar Local'}</button>
-    </>
+    </div>
   );
 }
 
 export default CadastroLocalExercicio;
-

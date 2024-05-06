@@ -170,15 +170,50 @@ export const UsuariosContextProvider = ({ children }) => {
         }
     };
 
+    const [exercicios, setExercicios] = useState([]);
+
+
+    const fetchExercicios = async () => {
+    try {
+        const response = await fetch('http://localhost:3000/exercicios');
+        const data = await response.json();
+        setExercicios(data);
+    } catch (error) {
+        console.error('Erro ao buscar exercícios:', error);
+    }
+};
+
+    const cadastrarExercicio = async (exercicio) => {
+    try {
+        const response = await fetch('http://localhost:3000/exercicios', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(exercicio)
+        });
+        if (response.ok) {
+            fetchExercicios();
+        } else {
+            throw new Error('Falha ao cadastrar exercício');
+        }
+    } catch (error) {
+        console.error('Erro ao cadastrar exercício:', error);
+    }
+};
+
     useEffect(() => {
         fetchUsuarios();
         fetchLocais();
+        fetchExercicios();
     }, []);
 
     return (
         <UsuariosContext.Provider value={{
             usuarios,
             locais,
+            fetchExercicios,
+            cadastrarExercicio,
             fetchLocais,
             fetchUsuarios,
             login,
